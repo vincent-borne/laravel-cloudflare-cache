@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 namespace Yediyuz\CloudflareCache;
 
 use Closure;
@@ -48,7 +49,7 @@ class CloudflarePagesMiddleware
             return $request->attributes->get(CloudflareCache::TTL_ATTR);
         }
 
-        return config('cloudflare-cache.cache_ttl') ?? 600;
+        return (int) config('cloudflare-cache.default_cache_ttl') ?? 600;
     }
 
     public function shouldCacheResponse(Request $request, Response $response): bool
