@@ -62,9 +62,6 @@
         "test:styles:pro": "vendor/bin/phpstan analyse --pro --fix --watch"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.x-dev"
-        },
         "laravel": {
             "providers": [
                 "Yediyuz\\CloudflareCache\\CloudflareCacheServiceProvider"
